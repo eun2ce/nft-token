@@ -2,6 +2,7 @@
 
 #include <string>
 #include <eosiolib/eosio.hpp>
+#include <eosiolib/time.hpp>
 
 using std::map;
 using std::string;
@@ -23,17 +24,18 @@ namespace types {
         uuid        id;
         name        owner;
         string      name;
-        uint8_t     pet_type;
+        uint32_t    created_at;
+//      uint8_t     pet_type;
 
         uint64_t primary_key()const { return id; }
         uint64_t get_pets_by_owner()const { return owner.value; }
-        EOSLIB_SERIALIZE (st_pets, (id)(owner)(name)(pet_type))
+        EOSLIB_SERIALIZE (st_pets, (id)(owner)(name)(created_at))
     };
 
     typedef eosio::multi_index<"pets"_n, st_pets,
             eosio::indexed_by <"byowner"_n, const_mem_fun< st_pets, uint64_t, &st_pets::get_pets_by_owner>>
                 > _tb_pet;
-/*
+    /*
     struct st_transfer {
         name from;
         name to;

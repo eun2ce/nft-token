@@ -29,9 +29,10 @@ class [[eosio::contract("eosio.pet")]] pet: public contract {
         pet(name receiver, name code, datastream<const char*> ds)
         : contract(receiver, code, ds),
           pets(receiver, receiver.value)
-        {}
+          {}
 
        _tb_pet pets;
+        time_point_sec timepoint;
 
         [[eosio::action]]
             void createpet( name owner, string pet_name );
@@ -48,5 +49,6 @@ class [[eosio::contract("eosio.pet")]] pet: public contract {
         uint64_t get_next_id () { next_id++; return next_id; }
     private:
         uuid next_id = 0;
+
 };
 }

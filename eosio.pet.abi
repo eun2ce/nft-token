@@ -1,5 +1,5 @@
 {
-    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Wed Mar 20 10:20:48 2019",
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Wed Mar 20 17:36:15 2019",
     "version": "eosio::abi/1.1",
     "structs": [
         {
@@ -43,8 +43,8 @@
                     "type": "string"
                 },
                 {
-                    "name": "pet_type",
-                    "type": "uint8"
+                    "name": "created_at",
+                    "type": "uint32"
                 }
             ]
         },
