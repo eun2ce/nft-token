@@ -41,9 +41,12 @@ class [[eosio::contract("eosio.pet")]] pet: public contract {
 
         [[eosio::action]]
             void burnpet ( uuid pet_id );
-    private:
-        uuid next_id = 0;
+
+        [[eosio::action]]
+            void transfer (uint64_t sender, uint64_t receiver);
 
         uint64_t get_next_id () { next_id++; return next_id; }
+    private:
+        uuid next_id = 0;
 };
 }

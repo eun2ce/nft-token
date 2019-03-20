@@ -1,4 +1,3 @@
-//#include "lib/types.hpp"
 #include "lib/pet.hpp"
 #include "lib/utils.hpp"
 
@@ -7,7 +6,6 @@ namespace eosio {
 
 void pet::createpet( name owner, string pet_name ){
     require_auth( owner );
-
 
     eosio_assert( pet_name.length() >= 1, " name must have at least 1character");
     eosio_assert( pet_name.length() <= 20, " name cannot exceed 20 chars");
@@ -51,5 +49,19 @@ void pet::burnpet( uuid pet_id ){
     pets.erase( pet );
     return;
 }
+
+/*
+void pet::transfer(uint64_t sender, uint64_t receiver){
+    print("\n>>> sender >>>",sender," - name ", name{sender});
+    print("\n>>> receiver >>>",receiver, " - name ", name{receiver});
+
+   auto transfer_data = unpack_action_data<st_transfer>();
+   if (transfer_data.from == _self || transfer_data.to != _self){
+       return;
+   }
+    print("\n>>> transfer data quantity >>>" transfer_data.quantity);
+
+}
+*/
 }
 EOSIO_DISPATCH( eosio::pet, (createpet)(transferpet)(burnpet))

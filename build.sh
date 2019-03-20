@@ -1,4 +1,5 @@
-# pra
-# contract name =$1
+#!/bin/sh
+contract_name="eosio.pet"
 
-eosio-cpp -o $1.wasm $1.cpp --abigen
+eosio-cpp -o $contract_name.wasm $contract_name.cpp --abigen
+

@@ -33,8 +33,13 @@ namespace types {
     typedef eosio::multi_index<"pets"_n, st_pets,
             eosio::indexed_by <"byowner"_n, const_mem_fun< st_pets, uint64_t, &st_pets::get_pets_by_owner>>
                 > _tb_pet;
-    //_tb_pet pets;
-
-
+/*
+    struct st_transfer {
+        name from;
+        name to;
+        asset quantity;
+        string memo;
+    };
+*/
 };
 
