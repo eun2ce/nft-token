@@ -1,7 +1,7 @@
 #include <eosiolib/system.hpp>
-#include "lib/pet.hpp"
-#include "lib/utils.hpp"
-#include "lib/types.hpp"
+#include "../lib/pet.hpp"
+#include "../lib/utils.hpp"
+#include "../lib/types.hpp"
 
 using namespace types;
 namespace eosio {
