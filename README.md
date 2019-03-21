@@ -26,7 +26,7 @@ cd ../
 ./unitest.sh
 ```
 ### step 4
-enjoy your self
+enjoy
 
 ## test
 ### build nodeos 
