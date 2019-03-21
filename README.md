@@ -1,30 +1,32 @@
 # eosio.pet
 
 ## intro
-maybe ..
+maybe ..  
 i tried to implement an NFT token with eos
+
+
+## test
 
 ## enjoy
 ### step 1
+build nodeos
 ```cmd
 cd scripts
 ./nodeos.sh
 ```
-build nodeos
 
 ### step 2
+cleos wallet unlock
 ```cmd
 cd scripts
 ./scripts/un_default.sh
 ```
-cleos wallet unlock
 
 ### step 3
+this file include create account, createpet action
 ```cmd
 cd ../
 ./unitest.sh
 ```
 ### step 4
-try transaction
-
-
+enjoy your self
