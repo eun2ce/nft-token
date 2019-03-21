@@ -39,7 +39,9 @@ enjoy your self
 ![nodeos](./sc/setting.png)
 
 ### try transaction
-* transfer pet
+#### transfer pet
+> cleos push action eosio transferpet '[" [account] ", " [pet_id] "]' -p [petowner]
 ![nodeos](./sc/transferpet.png)
-* burn pet
+#### burn pet
+> cleos push action eosio burnpet '[" [pet_id] "]' -p [owner]
 ![nodeos](./sc/burnpet.png)
