@@ -31,13 +31,14 @@ void pet::transferpet( name to, uuid pet_id ){
     eosio_assert( itr != pets.end(), "E404 | invalid pet" );
     auto pet = *itr;
     require_auth ( itr->owner );
-print ("itr owner: ",itr->owner);
-    pets.modify (itr,_self,[&]( auto&r ){r.owner = to;});
-    /*
-    pets.modify(itr,_self,[&]( auto&r ){
+
+    //@debug
+    print ("itr owner: ",itr->owner);
+
+    pets.modify (itr,_self,[&]( auto&r ) {
             r.owner = to;
-            });
-*/
+    });
+
     print(" new owner :", to);
 
     return;
