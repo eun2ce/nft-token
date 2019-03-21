@@ -4,9 +4,6 @@
 maybe ..  
 i tried to implement an NFT token with eos
 
-
-## test
-
 ## enjoy
 ### step 1
 build nodeos
@@ -30,3 +27,19 @@ cd ../
 ```
 ### step 4
 enjoy your self
+
+## test
+### build nodeos 
+![nodeos](./sc/build_nodeos.png)
+
+### wallet unlock
+![nodeos](./sc/unlock_wallet.png)
+
+### set transaction and create accounts
+![nodeos](./sc/setting.png)
+
+### try transaction
+* transfer pet
+![nodeos](./sc/transferpet.png)
+* burn pet
+![nodeos](./sc/burnpet.png)
