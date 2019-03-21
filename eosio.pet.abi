@@ -1,5 +1,5 @@
 {
-    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Wed Mar 20 08:34:39 2019",
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Thu Mar 21 14:20:21 2019",
     "version": "eosio::abi/1.1",
     "structs": [
         {
@@ -43,8 +43,22 @@
                     "type": "string"
                 },
                 {
-                    "name": "pet_type",
-                    "type": "uint8"
+                    "name": "created_at",
+                    "type": "uint32"
+                }
+            ]
+        },
+        {
+            "name": "transfer",
+            "base": "",
+            "fields": [
+                {
+                    "name": "sender",
+                    "type": "uint64"
+                },
+                {
+                    "name": "receiver",
+                    "type": "uint64"
                 }
             ]
         },
@@ -78,6 +92,11 @@
         {
             "name": "createpet",
             "type": "createpet",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "transfer",
+            "type": "transfer",
             "ricardian_contract": ""
         },
         {
