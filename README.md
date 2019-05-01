@@ -1,9 +1,5 @@
 # eosio.pet
 
-## intro
-maybe ..  
-i tried to implement an NFT token with eos
-
 ## enjoy
 ### step 1
 build nodeos
