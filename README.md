@@ -1,43 +1,37 @@
-# eosio.pet
+# eospet
 
-## enjoy
-### step 1
-build nodeos
-```cmd
-cd scripts
-./nodeos.sh
+## Build
+
+```
+$ git submodule update --init --recursive
+$ ./build.sh
 ```
 
-### step 2
-cleos wallet unlock
-```cmd
-cd scripts
-./scripts/un_default.sh
+## Deploy
+
+```
+$ cleos set contract eospet build/eospet/. -p eospet
 ```
 
-### step 3
-this file include create account, createpet action
-```cmd
-cd ../
-./unitest.sh
+## Usage
+
 ```
-### step 4
-enjoy
+$ cleos push action eospet createpet '["eospet", "eun2cepet"]' -p eospet
+```
 
-## test
-### build nodeos 
-![nodeos](./sc/build_nodeos.png)
+## Result
 
-### wallet unlock
-![nodeos](./sc/unlock_wallet.png)
-
-### set transaction and create accounts
-![nodeos](./sc/setting.png)
-
-### try transaction
-#### transfer pet
-> cleos push action eosio transferpet '[" [account] ", " [pet_id] "]' -p [petowner]
-![nodeos](./sc/transferpet.png)
-#### burn pet
-> cleos push action eosio burnpet '[" [pet_id] "]' -p [owner]
-![nodeos](./sc/burnpet.png)
+```
+{
+  "rows": [{
+      "id": "10780039778061876128",
+      "owner": "eospet",
+      "petname": "eun2cepet",
+      "type": 0,
+      "created_at": "2019-07-09T02:59:57",
+      "activated": 0
+    }
+  ],
+  "more": false
+}
+```
